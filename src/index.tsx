@@ -23,8 +23,8 @@ export const BookList = () => {
   };
   return (
     <section className="booklist">
-      {books.map((book) => (
-        <Book {...book} key={book.id} getBook={getBook} />
+      {books.map((book, idx) => (
+        <Book {...book} key={idx} getBook={getBook} />
       ))}
     </section>
   );
