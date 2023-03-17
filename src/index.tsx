@@ -16,8 +16,32 @@ const secondBook = {
 export const BookList = () => {
   return (
     <section className="booklist">
+      <EventExamples />
       <Book author={firstBook.author} title={firstBook.title} />
       <Book author={secondBook.author} title={secondBook.title} />
+    </section>
+  );
+};
+
+const EventExamples = () => {
+  const handleFormInput = () => {
+    console.log("handle form input");
+  };
+  const handleButtonClick = () => {
+    alert("handle form input");
+  };
+  return (
+    <section>
+      <form>
+        <h2>Typical Form</h2>
+        <input
+          type="text"
+          name="example"
+          onChange={handleFormInput}
+          style={{ margin: "1rem 0" }}
+        />
+      </form>
+      <button onClick={handleButtonClick}>Click Me!</button>
     </section>
   );
 };
